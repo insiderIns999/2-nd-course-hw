@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS hw-2</title>
+    </head>
+    <body>
+        <script>
+            //-----------task 1--------------
+            let a = 10;
+            alert(a);
+            a = 20;
+            alert(a);
+
+            //-----------task 2--------------
+            let yearFirstIPhone = 2007;
+            alert(yearFirstIPhone);
+
+            //--------------task 3-----------
+            let nameCreatorJavaScript = 'Брендан Эйх';
+            alert(nameCreatorJavaScript);
+
+            /* P.S. JavaScript был создан компанией Netscape в 1995 году
+            и быстро стал одним из самых популярных языков
+            программирования благодаря своей простоте и
+            широкому применению.JavaScript
+            был создан Бренданом Эйком,
+            который работал над разработкой языка,
+            названного Mocha. Американский программист,
+            создатель языка программирования JavaScript.
+            Родился 4 июля 1961 года в Питтсбурге, штат Пенсильвания.
+            Эйх начал карьеру в Silicon Graphics, где проработал семь лет.
+            Следующие три года проработал в MicroUnity Systems Engineering.
+            Больше всего известен своей работой в Netscape и Mozilla.
+            Он начал работу в Netscape в апреле 1995 года,
+            где разработал язык программирования,
+            изначально называвшийся «Mocha», затем переименованный
+            в «LiveScript» и наконец переименованный в JavaScript
+            для браузера Netscape Navigator.*/
+
+            //---------------task 4------------
+            let number1 = 10;
+            let number2 = 2;
+            let summa = number1 + number2;
+            let difference = number1 - number2;
+            let product = number1 * number2;
+            let quotient = number1 / number2;
+            alert("Сумма number1 и number2 равна " + summa + ";\n" + "Разность number1 и number2 равна " + difference + ";\n" +
+                "Произведение number1 и number2 равно " + product + ";\n" + "Кратное при делении number1 на number2 равно " +
+                quotient);
+
+            //--------------------task 5-----------
+            let result = 2 ** 5;
+            alert(result);
+
+            //------------------task 6---------------
+            a = 9;
+            let b = 2;
+            alert(a % b);
+
+            //-------------task 7--------------
+            let num = 1;
+            num += 5;
+            num -= 3;
+            num *= 7;
+            num /= 3;
+            num++;
+            num--;
+            alert(num);
+
+            //-------------task 8-------------
+            let age = prompt('Сколько вам лет?');
+            alert(age);
+
+            //------------task 9.0-------------
+            let user = {
+                name: "Oleg",
+                age: 36,
+                usAdmin: true
+            };
+
+            //-----------task 9.1--------------
+            user['city of residence'] = 'Murmansk region';
+
+            //-----------task 9.2--------------
+            user['age'] = 8;
+
+            //-----------task 9.3--------------
+            delete user['city of residence'];
+
+            //------------task 9.4-----------
+            let info = prompt('Какую информацию хотите узнать о пользователе?', 'name');
+            alert(user[info]);
+
+            //-----------task 10-----------
+            let whatsYourName = prompt('Введите Ваше имя');
+            alert('Привет, ' + whatsYourName.toUpperCase() + '!');
+        </script>
+    </body>
+</html>
