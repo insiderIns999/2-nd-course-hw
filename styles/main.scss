@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    width: 1440px;
+    margin: 0 auto;
+}
+
+.center {
+    padding: 0 calc(50% - 600px);
+}
+
+/*--------------ШАПКА САЙТА----------*/
+
+.header {
+    background-image: url(../images/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1024px;
+    max-width: 100%;
+
+    &__top {
+        padding-top: 217px;
+        height: 312px;
+        max-width: 760px;
+    }
+
+    &__title,
+    &__opis {
+        color: rgb(255, 255, 255);
+        text-align: left;
+        font-family: inherit;
+    }
+
+    &__title {
+        font-size: 64px;
+        line-height: 78px;
+        font-weight: 700;
+    }
+
+    &__opis {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 300;
+        margin-top: 37px;
+
+        &_white {
+            font-weight: 700;
+        }
+    }
+
+    &__btn {
+        border: none;
+        border-radius: 30px;
+        background: rgb(156, 3, 50);
+        color: rgb(255, 255, 255);
+        font-family: inherit;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        margin-top: 44px;
+        padding: 13px 74px;
+        text-align: left;
+
+        &:hover {
+            border-radius: 30px;
+            background: rgb(235, 68, 63);
+            cursor: pointer;
+        }
+    }
+}
+
+/*------------ГЛАВНЫЙ КОНТЕНТ----------*/
+
+.main {
+    background-color: rgb(0, 9, 21);
+    height: 556px;
+}
+
+.games {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 128px;
+
+    &__game {
+        border-radius: 16px;
+        box-sizing: border-box;
+
+        &:hover {
+            outline: 3px solid rgb(68, 210, 255);
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            cursor: pointer;
+        }
+    }
+
+    &__game-link img {
+        position: relative;
+    }
+
+    &__game-opis {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-family: inherit;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: left;
+        top: 1388.36px;
+
+        &_one {
+            left: 16em;
+        }
+
+        &_two {
+            left: 33em;
+        }
+
+        &_three {
+            left: 50em;
+        }
+    }
+}
