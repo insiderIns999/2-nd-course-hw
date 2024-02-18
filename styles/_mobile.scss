@@ -1,0 +1,46 @@
+@media (max-width: 375px) {
+    body {
+        max-width: 375px;
+    }
+
+    .center {
+        padding: 0 calc(50% - 200px);
+    }
+
+    .header {
+        background-image: url(../images/mobile_header-bg.png);
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+
+        &__top,
+        &__title,
+        &__opis {
+            text-align: center;
+        }
+
+        &__top {
+            padding-top: 238px;
+        }
+
+        &__title {
+            font-family: Montserrat;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 39px;
+        }
+
+        &__opis {
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 22px;
+        }
+
+        &__btn {
+            margin-bottom: 238px;
+        }
+    }
+}
