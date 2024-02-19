@@ -23,19 +23,31 @@
             <section class="games center">
                 <div class="games__game">
                     <a class="games__game-link" href="#">
-                        <img src="images/game1.png" alt="Игра 1" />
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="./images/game1_small.png" />
+                            <source media="(max-width: 1440px)" srcset="./images/game1.png" />
+                            <img src="./images/game1.png" alt="Игра 1" />
+                        </picture>
                     </a>
                     <p class="games__game-opis games__game-opis_one">Игра 1</p>
                 </div>
                 <div class="games__game">
                     <a class="games__game-link" href="#">
-                        <img src="images/game2.png" alt="Игра 2" />
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="./images/game2_small.png" />
+                            <source media="(max-width: 1440px)" srcset="./images/game2.png" />
+                            <img src="./images/game2.png" alt="Игра 2" />
+                        </picture>
                     </a>
                     <p class="games__game-opis games__game-opis_two">Игра 2</p>
                 </div>
                 <div class="games__game">
                     <a class="games__game-link" href="#">
-                        <img src="images/game3.png" alt="Игра 3" />
+                        <picture>
+                            <source media="(max-width: 375px)" srcset="./images/game3_small.png" />
+                            <source media="(max-width: 1440px)" srcset="./images/game3.png" />
+                            <img src="./images/game3.png" alt="Игра 3" />
+                        </picture>
                     </a>
                     <p class="games__game-opis games__game-opis_three">Игра 3</p>
                 </div>
@@ -43,12 +55,13 @@
             <section class="seasons center">
                 <div class="seasons__left">
                     <h3 class="seasons__zag">Времена года!</h3>
-                    <p class="seasons__opis">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы<br />узнаете к какому времени года он
+                    <p class="seasons__opis">Нажмите кнопку играть, введите номер месяца (от 1 до 12) и вы<br />узнаете к
+                        какому времени года он
                         относится</p>
                     <button class="seasons__btn">Играть!</button>
                 </div>
                 <div class="seasons__right">
-                    <img class="seasons__img" src="images/gamepad.png" alt="gamepad" />
+                    <img id="seasons__image" class="seasons__img" src="./images/gamepad.png" alt="gamepad" />
                 </div>
             </section>
         </main>

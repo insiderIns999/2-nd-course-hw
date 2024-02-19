@@ -12,16 +12,19 @@
         //------------task 1--------------------
         let password = 'пароль';
         let userPassword = prompt('Введите пароль');
-        password == userPassword ? alert('Пароль введен верно') : alert('Пароль введен неправильно');
+        if (password == userPassword) alert('Пароль введен верно');
+        else alert('Пароль введен неправильно');
 
         //--------------task 2---------------------
         let c = 2;
-        ((c > 0) && (c < 10)) ? console.log('Верно') : console.log('Не верно');
+        if (c > 0 && c < 10) console.log('Верно');
+        else console.log('Не верно');
 
         //--------------task 3--------------------
         let d = 300;
         let e = 700;
-        (d > 100 || e > 100) ? console.log('Верно') : console.log('Не верно');
+        if (d > 100 || e > 100) console.log('Верно');
+        else console.log('Не верно');
 
         //-----------------task 4------------------
         let a = '2';
@@ -32,16 +35,24 @@
         //-----------------task 5-----------------
         let monthNumber = 12;
         switch (monthNumber) {
-            case ((monthNumber == 12) || ((monthNumber >= 1) && (monthNumber <= 2))):
+            case 1:
+            case 2:
+            case 12:
                 alert('Зима');
                 break;
-            case ((monthNumber >= 3) && (monthNumber <= 5)):
+            case 3:
+            case 4:
+            case 5:
                 alert('Весна');
                 break;
-            case ((monthNumber >= 6) && (monthNumber <= 8)):
+            case 6:
+            case 7:
+            case 8:
                 alert('Лето');
                 break;
-            case ((monthNumber >= 9) && (monthNumber <= 11)):
+            case 9:
+            case 10:
+            case 11:
                 alert('Осень');
                 break;
             case (monthNumber >= 13):
@@ -59,16 +70,16 @@
         }
 
         //-------------task-8---------------
-        let clientOS = 0;
-        let userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        if (/android/i.test(userAgent)) {
-            clientOS = 1;
-        }
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-            clientOS = 0;
-        }
+        let clientOS = 1;
         if (clientOS == 0) console.log('Установите версию приложения для iOS по ' + "<a href=\"#\">" + 'ссылке' + "</a>");
         if (clientOS == 1) console.log('Установите версию приложения для Android по ' + "<a href=\"#\">" + 'ссылке' + "</a>");
+
+        //------------task-9--------------
+        let clientDeviceYear = 2015;
+        if (clientOS = 0 && clientDeviceYear < 2015) console.log('Установите облегченную версию приложения для iOS по ' + "<a href=\"#\">" + 'ссылке' + "</a>");
+        else if (clientOS = 1 && clientDeviceYear < 2015) console.log('Установите облегченную версию приложения для Android по ' + "<a href=\"#\">" + 'ссылке' + "</a>");
+        else if (clientOS == 0) console.log('Установите версию приложения для iOS по ' + "<a href=\"#\">" + 'ссылке' + "</a>");
+        else console.log('Установите версию приложения для Android по ' + "<a href=\"#\">" + 'ссылке' + "</a>");
     </script>
 </body>
 
