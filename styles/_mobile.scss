@@ -77,23 +77,10 @@
         margin-top: 64px;
     }
 
+}
+
+@media (max-width: 510px) {
     .seasons__img {
         height: 236px;
-    }
-
-    .games__game-opis {
-        left: 2em;
-    }
-
-    .games__game-opis_one {
-        top: 57em;
-    }
-
-    .games__game-opis_two {
-        top: 71em;
-    }
-
-    .games__game-opis_three {
-        top: 85em;
     }
 }
