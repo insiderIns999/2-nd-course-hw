@@ -17,7 +17,8 @@ body {
   background-image: url(../images/main_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 1240px;
+  background-position: center;
+  padding-bottom: 600px;
 }
 .header__top {
   padding-top: 217px;
@@ -87,8 +88,6 @@ body {
 }
 .games__game:hover {
   outline: 3px solid rgb(68, 210, 255);
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   cursor: pointer;
 }
 .games__game-link img {
@@ -177,7 +176,7 @@ body {
     text-align: center;
   }
   .header__top {
-    padding-top: 238px;
+    padding-top: 300px;
   }
   .header__title {
     font-family: Montserrat;

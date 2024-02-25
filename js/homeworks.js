@@ -227,7 +227,13 @@ function min(a, b) {
     if (a <= b) {
         return a;
     }
+
+    else {
+        return false;
+    }
 }
+
+console.log(min(5, 2));
 
 //---------------------task-2------------------
 function checkingTheNumber(n) {
@@ -267,15 +273,16 @@ function checkNumber(a, b) {
     if (isNaN(Number(a)) || isNaN(Number(b))) {
         return 'Одно или оба значения не являются числом'
     }
-    if (!isNaN(Number(a)) && !isNaN(Number(b))) {
+    
+    else {
         return a * b;
     }
 }
 
 //--------------------task-6----------------------
 function quad() {
-    let n = prompt('Введите число');
-    if (isNaN(Number(n))) {
+    let n = Number(prompt('Введите число'));
+    if (isNaN(n)) {
         return 'Переданный параметр не является числом';
     }
     else {
@@ -315,17 +322,13 @@ function userMonthCheck(numMonth) {
             return 'Зима';
         }
 
-        else if (
-            (numMonth >= 3 && numMonth <= 5) {
-                return 'Весна';
-            }
-        )
+        else if (numMonth >= 3 && numMonth <= 5) {
+            return 'Весна';
+        }
 
-        else if (
-            (numMonth >= 6 && numMonth <= 8) {
-                return 'Лето';
-            }
-        )
+        else if (numMonth >= 6 && numMonth <= 8) {
+            return 'Лето';
+        }
 
         else {
             return 'Осень';
