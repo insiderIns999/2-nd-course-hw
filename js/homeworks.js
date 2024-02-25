@@ -315,8 +315,8 @@ let circle2 = {
 }
 
 //-----------------task-8--------------------
-let numMonth = 1;
 function userMonthCheck(numMonth) {
+    let numMonth = Number(prompt('Введите номер месяца'));
     if (numMonth >= 1 && numMonth <= 12) {
         if (numMonth == 12 || numMonth == 1 || numMonth == 2) {
             return 'Зима';
