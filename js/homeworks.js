@@ -33,6 +33,7 @@ alert(nameCreatorJavaScript);
 для браузера Netscape Navigator.*/
 
 //---------------task 4------------
+
 let number1 = 10;
 let number2 = 2;
 let summa = number1 + number2;
@@ -95,8 +96,9 @@ alert('Привет, ' + whatsYourName.toUpperCase() + '!');
 
 //------------task 1--------------------
 let password = 'пароль';
+let password2 = 'password';
 let userPassword = prompt('Введите пароль');
-if (password == userPassword) {
+if (password == userPassword || password2 == userPassword) {
     alert('Пароль введен верно');
 }
 else {
@@ -273,7 +275,7 @@ function checkNumber(a, b) {
     if (isNaN(Number(a)) || isNaN(Number(b))) {
         return 'Одно или оба значения не являются числом'
     }
-    
+
     else {
         return a * b;
     }
@@ -315,7 +317,7 @@ let circle2 = {
 }
 
 //-----------------task-8--------------------
-function userMonthCheck(numMonth) {
+function userMonthCheck() {
     let numMonth = Number(prompt('Введите номер месяца'));
     if (numMonth >= 1 && numMonth <= 12) {
         if (numMonth == 12 || numMonth == 1 || numMonth == 2) {
@@ -339,3 +341,173 @@ function userMonthCheck(numMonth) {
         alert('Введен не корректный номер месяца');
     }
 }
+
+
+//--------------------HW-6-----------------------
+//-----------------task-1-------------------
+let arr = [1, 5, 4, 10, 0, 3];
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+    if (arr[i] == 10) {
+        break;
+    }
+}
+
+//-------------------task-2--------------------
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] == 4) {
+        console.log(i);
+    }
+}
+
+//-------------------task-3--------------------
+let arr1 = [1, 3, 5, 10, 20];
+console.log(arr1.join(' '));
+
+//-------------------task-4----------------------
+let arr2 = [];
+for (let i = 0; i < 3; i++) {
+    arr2[i] = [];
+
+    for (let j = 0; j < 3; j++) {
+        arr2[i].push(1);
+    }
+}
+console.log(arr2);
+
+
+//-----------------task-5---------------------
+let arr3 = [1, 1, 1];
+for (let i = 0; i < 3; i++) {
+    arr3.push(2);
+}
+console.log(arr3);
+
+//-----------------task-6------------------
+let arr4 = [9, 8, 7, 'a', 6, 5];
+arr4.sort();
+arr4.pop();
+console.log(arr4);
+
+//--------------------task-7------------------
+let arr5 = [9, 8, 7, 6, 5];
+let userNumber = Number(prompt('Введите любое число'));
+let resultSearch;
+for (let i = 0; i < arr5.length; i++) {
+    if (arr5.includes(userNumber) == true) {
+        resultSearch = 'Угадал';
+        break;
+    }
+    else {
+        resultSearch = 'Не угадал';
+        continue;
+    }
+}
+alert(resultSearch);
+
+//-------------------------task-8------------------------
+let str = 'abcdef';
+let strSplit = str.split('');
+let strRev = strSplit.reverse();
+str = strRev.join('');
+console.log(str);
+
+//---------------------------task-9---------------------------------
+let arr7 = [[1, 2, 3], [4, 5, 6]];
+let newArr = [].concat(...arr7);
+console.log(newArr);
+
+//------------------------task-9-----------------------
+let arr6 = [[1, 2, 3], [4, 5, 6]];
+function enumerationArray(arr6) {
+    let result = [];
+    for (let i = 0; i < arr6.length; i++) {
+        const currentValue = arr6[i];
+        if (Array.isArray(currentValue)) {
+            result = [...result, ...(enumerationArray(currentValue))];
+        } else {
+            if (currentValue != null) {
+                result.push(currentValue);
+            }
+        }
+    }
+    return result;
+}
+result = enumerationArray(arr6);
+console.log(result);
+
+//--------------------task-10---------------------------
+let arr8 = [7, 3, 9, 1, 8, 2, 4, 6, 10];
+let sum = [];
+for (let i = 0; i < arr8.length; i++) {
+    if (i % 2 == 0) {
+        if (i == (arr8.length - 1)) {
+            break;
+        }
+        else {
+            sum = arr8[i] + arr8[i + 1];
+            console.log(sum);
+        }
+    }
+    else {
+        continue;
+    }
+}
+
+//-----------------------task-11-------------------------
+let newArr1 = [5, 7, 10, 2, 1, 15];
+let newArr2 = [];
+function square(x) {
+    for (let i = 0; i < x.length; i++) {
+        let squareNewArr1 = Math.pow(x[i], 2);
+        newArr2.push(squareNewArr1);
+    }
+    return newArr2;
+}
+console.log(square(newArr1));
+
+//-------------------------task-12---------------------
+let strArr = ['Привет', 'язык', 'JavaScript'];
+let strNewArr = [];
+function widthStrArr(x) {
+    return strNewArr = x.map((y) => y.length);
+}
+console.log(widthStrArr(strArr));
+
+//----------------------task-13--------------------
+let arrInt = [10, -15, 7, -2, 9, -1, 3, -20];
+let arrBelowZero = [];
+function belowZero(zero) {
+    return arrBelowZero = zero.filter((x) => x < 0);
+}
+console.log(belowZero(arrInt));
+
+//-----------------------task-14-------------------
+let arrRan = [];
+let arrEvenNumbers = [];
+function arrRandom(arr) {
+    for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random(1, 10) * 10));
+    }
+    return arr;
+}
+function arrayEvenNumbers(x, y) {
+    y = x.filter((z) => z % 2 == 0);
+    return y;
+}
+console.log(arrRandom(arrRan));
+console.log(arrayEvenNumbers(arrRan, arrEvenNumbers));
+
+//----------------------task-15----------------------
+let arrArif = [];
+let summaArrValues;
+let res;
+for (let i = 0; i < 6; i++) {
+    arrArif.push(Math.floor(Math.random(1, 10) * 10));
+    summaArrValues = arrArif.reduce((accum, currentValue) => accum + currentValue);
+}
+res = summaArrValues / arrArif.length;
+
+console.log(arrArif);
+console.log(summaArrValues);
+console.log(res);
