@@ -17,7 +17,8 @@ body {
     background-image: url(../images/main_bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 1240px;
+    background-position: center;
+    padding-bottom: 600px;
 
     &__top {
         padding-top: 217px;
@@ -96,8 +97,6 @@ body {
 
         &:hover {
             outline: 3px solid rgb(68, 210, 255);
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
             cursor: pointer;
         }
     }
