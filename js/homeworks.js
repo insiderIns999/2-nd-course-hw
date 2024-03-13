@@ -512,7 +512,7 @@ console.log(arrArif);
 console.log(summaArrValues);
 console.log(res);
 
-*/
+
 
 
 
@@ -639,3 +639,109 @@ function randomUserGame() {
 }
 
 randomUserGame();
+
+*/
+
+//-------------------------HW-8-----------------------
+//-------------task-1----------------------
+const peoples = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+];
+
+// Допишите колбэк для sort, изучите, как работает колбэк, в документации
+console.log(peoples.sort((a, b) => a.age - b.age));
+// код выше должен вывеcти =>
+// [
+//  { name: 'Олег', age: 7 },
+//  { name: 'Анна', age: 17 },
+//  { name: 'Глеб', age: 29 },
+//  { name: 'Оксана', age: 47 }
+// ]
+
+console.log('-------------------------');
+
+//--------------------------task-2----------------
+/*function map(arr, ruleFunction) {
+   const output = [];
+   console.log('ruleFunction', ruleFunction);
+
+   for (let i = 0; i < arr.length; i++) {
+      output.push(ruleFunction(arr[i]));
+   }
+   return output;
+}*/
+
+function isPositive(num) {
+    return num < 0 ? false : true;
+}
+
+function isMale(arrPeople) {
+    if (arrPeople.gender === 'male') return true;
+}
+
+function filter(resArray, ruleFunction) {
+    const result = [];
+    for (let i = 0; i < resArray.length; i++) {
+        if (ruleFunction(resArray[i])) result.push(resArray[i]);
+    }
+    return result;
+}
+
+console.log(filter([3, -4, 1, 9], isPositive));
+
+const people = [
+    { name: 'Глеб', gender: 'male' },
+    { name: 'Анна', gender: 'female' },
+    { name: 'Олег', gender: 'male' },
+    { name: 'Оксана', gender: 'female' }
+];
+
+console.log(filter(people, isMale));
+
+console.log('-------------------------');
+
+//---------------task-3---------------------
+function timer() {
+    let timerId = setInterval(() => console.log(Date()), 3000);
+    setTimeout((func) => {
+        clearInterval(timerId);
+        console.log('30 секунд прошло');
+    }, 30000);
+}
+timer();
+
+//----------------task-4----------------------
+function delayForSecond(callback) {
+    setTimeout(() => { callback() }, 1000);
+}
+
+delayForSecond(function () {
+    console.log('Привет, Глеб!');
+})
+
+console.log('-------------------------');
+
+//---------------task-5-----------------
+// Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log('Привет, ${name}!');
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+delayForSecond(() => sayHi('Глеб'));
+
+console.log('-------------------------');
