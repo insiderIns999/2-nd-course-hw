@@ -51,11 +51,10 @@
         row-gap: 32px;
     }
 
-    .seasons {
+    .seasons, .words {
         display: flex;
         padding-top: 128px;
         padding-bottom: 233px;
-        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
@@ -64,34 +63,43 @@
             height: 265px;
         }
     }
+
+    .seasons {
+        flex-direction: column;
+        padding-bottom: 136px;
+    }
+
+    .words {
+        flex-direction: column-reverse;
+    }
     
-    .seasons__left {
+    .seasons__left, .words__right {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .seasons__zag {
+    .seasons__zag, .words__zag {
         font-size: 32px;
         font-weight: 700;
         line-height: 39px;
         text-align: center;
     }
 
-    .seasons__opis {
+    .seasons__opis, .words__opis {
         font-size: 14px;
         font-weight: 300;
         line-height: 22px;
         text-align: center;
     }
 
-    .seasons__btn {
+    .seasons__btn, .words__btn {
         font-size: 18px;
         font-weight: 400;
         line-height: 22px;
     }
 
-    .seasons__right {
+    .seasons__righ, .words__leftt {
         margin-top: 64px;
     }
     }
@@ -102,78 +110,6 @@
         padding-left: 16px;
         padding-right: 16px;
     }
-
-    /*.header {
-        background-image: url(../images/mobile_header-bg.png);
-        background-repeat: no-repeat;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: center;
-        align-items: center;
-        padding-bottom: 238px;
-
-        &__top,
-        &__title,
-        &__opis {
-            text-align: center;
-        }
-
-        &__top {
-            padding-top: 238px;
-        }
-
-        &__title {
-            font-family: Montserrat;
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 39px;
-        }
-
-        &__opis {
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 22px;
-        }
-
-        &__btn {
-            margin-bottom: 238px;
-        }
-    }
-
-    .games {
-        row-gap: 32px;
-    }
-
-    .seasons__left {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .seasons__zag {
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 39px;
-        text-align: center;
-    }
-
-    .seasons__opis {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 22px;
-        text-align: center;
-    }
-
-    .seasons__btn {
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 22px;
-    }
-
-    .seasons__right {
-        margin-top: 64px;
-    }*/
 
 }
 

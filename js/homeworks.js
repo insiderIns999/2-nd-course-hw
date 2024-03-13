@@ -1,5 +1,5 @@
 //----------------------------------------------------------HW-2------------------------------------
-
+/*
 //-----------task 1--------------
 let a = 10;
 alert(a);
@@ -33,7 +33,7 @@ alert(nameCreatorJavaScript);
 для браузера Netscape Navigator.*/
 
 //---------------task 4------------
-
+/*
 let number1 = 10;
 let number2 = 2;
 let summa = number1 + number2;
@@ -511,3 +511,131 @@ res = summaArrValues / arrArif.length;
 console.log(arrArif);
 console.log(summaArrValues);
 console.log(res);
+
+*/
+
+
+
+
+//--------------------------------HW-7----------------------------------------
+//--------------------task-1------------------------------
+console.log('js'.toUpperCase());
+console.log('-------------------------');
+
+//---------------------------task-2------------------------
+let arr15 = ['Привет Юрий', 'Василий привет', 'Привет Иван', 'Василий как дела?'];
+let str10 = 'Василий';
+let arr16 = [];
+function secondStr(str17, str18) {
+    arr15.forEach((str17) => {
+        if (str17.toLowerCase().startsWith(str18.toLowerCase())) {
+            arr16.push(str17);
+            return arr16;
+        }
+    });
+    return arr16;
+}
+console.log(secondStr(arr15, str10));
+console.log('-------------------------');
+
+//--------------------------task-3---------------------------
+let integer = 32.58884;
+console.log(Math.floor(integer));
+console.log(Math.ceil(integer));
+console.log(Math.round(integer));
+console.log('-------------------------');
+
+//---------------------------task-4--------------------------
+let arr17 = [52, 53, 49, 77, 21, 32];
+console.log(Math.min(...arr17));
+console.log(Math.max(...arr17));
+console.log('-------------------------');
+
+//----------------------task-5---------------------------------
+function randomDigit() {
+    console.log(Math.floor(Math.random() * 10));
+}
+randomDigit();
+console.log('-------------------------');
+
+//---------------------task-6--------------------------
+randomArr = [];
+let count = 10;
+function randomDigitals(chislo) {
+    for (let i = 0; i < (chislo / 2); i++) {
+        randomArr.push(Math.floor(Math.random() * chislo));
+    }
+    console.log(randomArr);
+}
+randomDigitals(count);
+console.log('-------------------------');
+
+//----------------------task-7--------------------------
+let firstDigit = 10;
+let secondDigit = 20;
+function randomChislo(num1, num2) {
+    num1 = Math.floor(num1);
+    num2 = Math.ceil(num2);
+    console.log(Math.floor(Math.random() * (num2 - num1) + num1));
+}
+randomChislo(firstDigit, secondDigit);
+console.log('-------------------------');
+
+//---------------------task-8----------------------------
+console.log(new Date());
+console.log('-------------------------');
+
+//---------------------task-9---------------------------
+let currentDate = new Date();
+let days = 73 * 24 * 60 * 60 * 1000;
+let date = +currentDate;
+let date73 = date + days;
+let newDate = new Date(date73);
+console.log(newDate);
+console.log('-------------------------');
+
+//------------------------task-10---------------------
+let date1 = new Date();
+function rusDate(d) {
+    let day = d.getDay();
+    let date = d.getDate().toString().padStart(2, '0');
+    let month = d.getMonth();
+    let year = d.getFullYear();
+    let hours = d.getHours().toString().padStart(2, '0');
+    let minutes = d.getMinutes().toString().padStart(2, '0');;
+    let seconds = d.getSeconds().toString().padStart(2, '0');;
+
+    daysArray = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+    monthArray = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля', 'Августа', 'Сентября', 'Октября', 'Ноября', 'Декабря'];
+
+    return `Дата: ${date} ${monthArray[month]} ${year} - это ${daysArray[day]}\nВремя: ${hours}:${minutes}:${seconds}`;
+}
+
+console.log(rusDate(date1));
+console.log('-------------------------');
+
+//-----------------------task-11------------------------------------
+function randomUserGame() {
+    let words = ['Яблоко', 'Груша', 'Дыня', 'Виноград', 'Персик', 'Апельсин', 'Мандарин'];
+    let sortWords = words.sort(func);
+    function func() {
+        return 0.5 - Math.random();
+    }
+    alert(sortWords);
+    let firstWord = prompt('Введите первое слово');
+    let secondWord = prompt('Введите последнее слово');
+    if (firstWord.toLowerCase() === sortWords[0].toLowerCase()) {
+        alert('Первое слово угадано верно');
+    }
+    else {
+        alert('Первое слово названо не верно');
+    }
+    if (secondWord.toLowerCase() === sortWords[sortWords.length - 1].toLowerCase()) {
+        alert('Второе слово угадано верно');
+    }
+    else {
+        alert('Второе слово названо не верно');
+    }
+}
+
+randomUserGame();
