@@ -730,12 +730,12 @@ console.log('-------------------------');
 function delayForSecond(cb) {
     setTimeout(() => {
         console.log('Прошла одна секунда');
-        if(cb) {  cb(); }
+        if (cb) { cb(); }
     }, 1000)
 }
 
 // Функция sayHi выводит в консоль приветствие для указанного имени
-function sayHi (name) {
+function sayHi(name) {
     console.log('Привет, ${name}!');
 }
 
